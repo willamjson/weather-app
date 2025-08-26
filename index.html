@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+  
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    #bannere {
+      background: url("beautiful-view-empty-road-surrounded-by-greenery-dark-storm-clouds.jpg") no-repeat center center/cover;
+      min-height: 100vh; 
+      width: 100%; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .weather-box {
+      background: rgba(41, 39, 39, 0.3);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-top: 50px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+    }
+  #icon{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+  }  
+  </style>
+</head>
+<body>
+  <section id="bannere">
+   
+    <h1>Weather App</h1>
+    <input type="text" id="city" placeholder="Apna Shehar likhen...">
+    <button onclick="getWeather()">Check Weather</button>
+    
+    <div class="weather-box" id="weatherBox" style="display:none;">
+      <h2 id="cityName"></h2>
+      <p id="nightday"></p>
+      <img id="icon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png
+      " alt="">
+      <h3 id="temp"></h3>
+      <p id="desc"></p>
+      <p id="humidity"></p>
+      <p id="wind_mph"></p>
+      <p id="wind_kph"></p>
+    </div>
+  </section>
+<script src="script.js"></script>
+</body>
+</html>
